@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- <link rel= "stylesheet" type= "text/css" href= "bootstrap-4.3.1-dist/css/"> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link href="{{ url_for('static', filename='css/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}" rel="stylesheet">
+    <title>Raspberry engines controller</title>
+</head>
+
+<body class="bg-light text-dark -apple-system">
+    <div class="container mt-5 pt-5">
+        <div class="row justify-content-center text-center">
+            <h1>ROBOT QUE SUBE ESCALERAS</h1>
+            <div class="row justify-content-center m-3">
+                <div class="my-3 text-center">
+                    <h4>
+                        Controlador del robot
+                    </h4>
+                    <div class="pt-2"> 
+                        <p>A través de estos botones podrá enviar instrucciones al robot. Asegurese de estar conectado
+                            en la misma red local.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="card  col-12 col-sm-10 col-md-8 col-lg-6 col-xl-6 shadow p-3 mb-5 bg-white rounded">
+                    <div class="card-body ">
+                        <div class="row justify-content-center m-3">
+                            <div>
+                                <a href="{{ url_for('forward') }}" method="POST">
+                                    <button type="button" class="btn btn-primary ">Forward</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="mr-3 my-3">
+                                <a href="{{ url_for('left') }}" method="POST">
+                                    <button type="button" class="btn btn-primary ">Left</button>
+                                </a>
+                            </div>
+                            <div class="mx-2 my-3">
+                                <a href="{{ url_for('stop') }}" method="POST">
+                                    <button type="button" class="btn btn-primary rounded-circle">Stop</button>
+                                </a>
+                            </div>
+                            <div class="ml-3 my-3">
+                                <a href="{{ url_for('right') }}" method="POST">
+                                    <button type="button" class="btn btn-primary ">Right</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center m-3">
+                            <div>
+                                <a href="{{ url_for('backward') }}" method="POST">
+                                    <button type="button" class="btn btn-primary ">Backward</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col col-8 text-center">
+                <h6 class="card-title">Integrantes</h6>
+                <p class="card-text">Nicolas Macias C.c. 99011304547</p>
+                <p class="card-text">Yorman Alexid Agudelo C.c. 1007331813 </p>
+                <p class="card-text">Daniela Diaz C.c. 1214735811 </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
